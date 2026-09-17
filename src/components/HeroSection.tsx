@@ -77,20 +77,20 @@ export const HeroSection: React.FC = () => {
         <div className="mt-2 flex flex-col items-center space-y-1">
           <div className="flex items-center space-x-3 mb-1">
             <StarEightPoint size={14} className="text-[#B49A72]" />
-            <p className="font-serif text-lg sm:text-2xl text-[#242222] font-normal tracking-wide">
+            <p className="font-serif text-lg sm:text-2xl text-[#242222] font-bold tracking-wide">
               {weddingData.weddingDate}
             </p>
             <StarEightPoint size={14} className="text-[#B49A72]" />
           </div>
           <div className="flex items-center space-x-2 text-xs sm:text-sm font-sans tracking-widest text-[#77716D] uppercase">
-            <span>{weddingData.weddingTime}</span>
+            <span className="font-bold">{weddingData.weddingTime}</span>
             <span className="text-[#B49A72]">·</span>
-            <span className="font-serif italic lowercase tracking-normal text-sm">insha&apos;Allah</span>
+            <span className="font-serif italic lowercase tracking-normal text-sm font-bold">insha&apos;Allah</span>
           </div>
-          <p className="font-serif text-base sm:text-lg text-[#3F4635] italic tracking-wide mt-2">
+          <p className="font-serif text-base sm:text-lg text-[#3F4635] italic font-bold tracking-wide mt-2">
             {weddingData.venue}
           </p>
-          <p className="font-sans text-[10px] sm:text-xs text-[#77716D] mt-1 max-w-xs text-center uppercase tracking-widest">
+          <p className="font-sans text-[10px] sm:text-xs text-[#77716D] font-bold mt-1 max-w-xs text-center uppercase tracking-widest">
             {weddingData.address}
           </p>
         </div>
