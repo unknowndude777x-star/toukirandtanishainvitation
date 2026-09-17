@@ -12,6 +12,7 @@ import { NikahDetailsSection } from './components/NikahDetailsSection';
 import { CountdownSection } from './components/CountdownSection';
 import { CursorSparkles } from './components/CursorSparkles';
 import { FinalBlessingSection } from './components/FinalBlessingSection';
+import { ShootingStarScroll } from './components/ShootingStarScroll';
 import { weddingData } from './data/weddingData';
 
 
@@ -72,6 +73,9 @@ export default function App() {
 
       {/* Global Cursor Sparkles Effect */}
       <CursorSparkles />
+      
+      {/* Shooting Star effect on open */}
+      {hasOpened && <ShootingStarScroll />}
     </div>
   );
 }
