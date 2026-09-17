@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-arabic: "Amiri", "Traditional Arabic", serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-ivory: #F7F3EE;
+  --color-beige: #E5D8C8;
+  --color-blush: #E8D6D0;
+  --color-gold: #B49A72;
+  --color-gold-light: #D4C3A3;
+  --color-gold-dark: #8F764E;
+  --color-olive: #3F4635;
+  --color-charcoal: #242222;
+  --color-stone-muted: #77716D;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F7F3EE;
+    color: #242222;
+    -webkit-font-smoothing: antialiased;
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNIDE2IDIgTCAyMCAxMSBMIDMwIDEyIEwgMjIgMTkgTCAyNCAyOSBMIDE2IDI0IEwgOCAyOSBMIDEwIDE5IEwgMiAxMiBMIDEyIDExIFoiIGZpbGw9IiNCNDlBNzIiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=') 16 2, auto;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-arabic {
+    font-family: var(--font-arabic);
+  }
+}
+
+/* Subtle luxury paper texture */
+.paper-texture {
+  background-color: transparent;
+  background-image: radial-gradient(#E5D8C8 0.65px, transparent 0.65px), radial-gradient(#E8D6D0 0.65px, transparent 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+.paper-grain {
+  background-color: transparent;
+  background-image: 
+    linear-gradient(rgba(180, 154, 114, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 154, 114, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Subtle gold foil shimmer effect */
+@keyframes subtle-shimmer {
+  0% { opacity: 0.85; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.12); }
+  100% { opacity: 0.85; filter: brightness(1); }
+}
+
+.animate-shimmer {
+  animation: subtle-shimmer 4s ease-in-out infinite;
+}
+
+/* Subtle background pan for motion */
+@keyframes bg-pan {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 300px 300px; }
+}
+
+.animate-bg-pan {
+  animation: bg-pan 30s linear infinite;
+}
+
+/* Luxury 3D shadow for stationery cards */
+.shadow-invitation {
+  box-shadow: 
+    0 2px 4px rgba(36, 34, 34, 0.03),
+    0 10px 25px -5px rgba(36, 34, 34, 0.08),
+    0 25px 50px -12px rgba(63, 70, 53, 0.12);
+}
+
+.shadow-wax {
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(180, 154, 114, 0.4),
+    0 10px 20px rgba(36, 34, 34, 0.15);
+}
