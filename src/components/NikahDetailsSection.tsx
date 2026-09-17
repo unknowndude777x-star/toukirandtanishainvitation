@@ -82,9 +82,6 @@ export const NikahDetailsSection: React.FC = () => {
                 <p className="font-serif text-lg text-[#242222] mt-1 font-medium">
                   {weddingData.weddingTime}
                 </p>
-                <span className="font-serif italic text-xs text-[#77716D] mt-0.5">
-                  Arrivals from 4:00 PM
-                </span>
               </div>
 
               {/* Venue & Location */}
