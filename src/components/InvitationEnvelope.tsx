@@ -244,7 +244,7 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({ onComple
           <WaxSeal
             isBreaking={step !== 'idle'}
             onClick={step === 'idle' ? handleOpen : undefined}
-            initials="M & Z"
+            initials="T & T"
           />
         </div>
 
@@ -266,7 +266,7 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({ onComple
           transition={{ delay: 0.8 }}
           className="absolute bottom-6 text-center text-xs tracking-widest text-[#242222]/60 uppercase font-sans pointer-events-none"
         >
-          An invitation from Maryam &amp; Zayd
+          An invitation from Toukir &amp; Tanisha
         </motion.p>
       )}
     </div>

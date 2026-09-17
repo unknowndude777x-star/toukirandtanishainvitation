@@ -10,7 +10,7 @@ interface WaxSealProps {
 export const WaxSeal: React.FC<WaxSealProps> = ({ 
   isBreaking = false, 
   onClick,
-  initials = "M & Z"
+  initials = "T & T"
 }) => {
   return (
     <motion.div
