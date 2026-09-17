@@ -41,7 +41,7 @@ export const FinalBlessingSection: React.FC = () => {
         <ScrollReveal delayMs={250} distance={24}>
           <div className="my-4">
             <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#242222] font-normal">
-              {weddingData.brideName} &amp; {weddingData.groomName}
+              {weddingData.groomName} &amp; {weddingData.brideName}
             </h3>
             <p className="font-sans text-xs uppercase tracking-[0.25em] text-[#77716D] mt-3">
               {weddingData.weddingDate}
@@ -59,7 +59,7 @@ export const FinalBlessingSection: React.FC = () => {
             <div className="mt-6 flex flex-col items-center">
               <span className="font-serif italic text-sm text-[#77716D]">With love,</span>
               <span className="font-serif text-base text-[#242222] tracking-wider mt-1">
-                {weddingData.brideName} &amp; {weddingData.groomName}
+                {weddingData.groomName} &amp; {weddingData.brideName}
               </span>
             </div>
           </div>
