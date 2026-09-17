@@ -4,6 +4,7 @@ import { WaxSeal } from './WaxSeal';
 import { BismillahCalligraphy, ArabesqueCorner, StarEightPoint } from './IslamicOrnaments';
 import { weddingData } from '../data/weddingData';
 import { Sparkles, ChevronDown } from 'lucide-react';
+import { bgMusic } from '../utils/audio';
 
 interface InvitationEnvelopeProps {
   onCompleteOpen: () => void;
@@ -25,6 +26,8 @@ export const InvitationEnvelope: React.FC<InvitationEnvelopeProps> = ({ onComple
 
   const handleOpen = () => {
     if (step !== 'idle') return;
+
+    bgMusic.play().catch(e => console.error("Audio play failed:", e));
 
     setStep('breaking');
 

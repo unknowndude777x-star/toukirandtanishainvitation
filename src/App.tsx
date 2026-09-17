@@ -12,7 +12,6 @@ import { NikahDetailsSection } from './components/NikahDetailsSection';
 import { CountdownSection } from './components/CountdownSection';
 import { CursorSparkles } from './components/CursorSparkles';
 import { FinalBlessingSection } from './components/FinalBlessingSection';
-import { AudioControl } from './components/AudioControl';
 import { weddingData } from './data/weddingData';
 
 
@@ -70,9 +69,6 @@ export default function App() {
         <FinalBlessingSection />
         </div>
       </main>
-
-      {/* Subtle Floating Ambient Music Control */}
-      {hasOpened && <AudioControl />}
 
       {/* Global Cursor Sparkles Effect */}
       <CursorSparkles />
