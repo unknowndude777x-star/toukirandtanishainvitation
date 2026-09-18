@@ -68,12 +68,11 @@ export const CursorSparkles: React.FC = () => {
       ctx.restore();
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      // Spawn a new particle occasionally (throttle to prevent too many)
+    const spawnParticle = (clientX: number, clientY: number) => {
       if (Math.random() > 0.4) {
         particles.push({
-          x: e.clientX,
-          y: e.clientY,
+          x: clientX,
+          y: clientY,
           size: Math.random() * 4 + 2, // size between 2 and 6
           speedX: (Math.random() - 0.5) * 1.5,
           speedY: (Math.random() - 0.5) * 1.5 + 0.5, // slight drift downwards
@@ -85,7 +84,19 @@ export const CursorSparkles: React.FC = () => {
       }
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      spawnParticle(e.clientX, e.clientY);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        spawnParticle(touch.clientX, touch.clientY);
+      }
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -116,6 +127,7 @@ export const CursorSparkles: React.FC = () => {
     return () => {
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
