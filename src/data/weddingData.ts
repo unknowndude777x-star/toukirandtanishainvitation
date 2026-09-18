@@ -40,7 +40,7 @@ export const weddingData: WeddingDetails = {
   brideName: "Maisha Imrose Tanisha",
   brideFamily: "Daughter of Yasin Chowdhury & Rafeya Sultana",
   groomName: "Yeasir Rahman Toukir",
-  groomFamily: "elder son of Ismail Jabiullah & Akima Akter",
+  groomFamily: "elder son of Ismail Jabiullah & Aklima Begum",
   weddingDate: "September 27, 2026",
   weddingTime: "7:30 PM",
   venue: "Officers Club Chattogram",
